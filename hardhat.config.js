@@ -11,9 +11,13 @@ require("./tasks/balance");
 require("./tasks/fund-link");
 require("./tasks/block-number");
 require("./tasks/dNFT");
+require('dotenv').config();
+
+const { PRIVATE_KEY, INFURA_API_KEY, ALCHEMY_API_KEY, ETHERSCAN_API_KEY } = process.env;
+
 
 module.exports = {
-  defaultNetwork: "rinkeby",
+  defaultNetwork: "sepolia",
   networks: {
     hardhat: {
       forking: {
@@ -23,11 +27,11 @@ module.exports = {
           "https://eth-mainnet.alchemyapi.io/v2/your-api-key",
       },
     },
-    rinkeby: {
-      url: process.env.RINKEBY_RPC_URL,
-      accounts: [process.env.PRIVATE_KEY],
+    sepolia: {
+      url: `https://sepolia.infura.io/v3/${INFURA_API_KEY}`,    
+      accounts: [`${PRIVATE_KEY}`],
       saveDeployments: true,
-    },
+    },   
   },
   etherscan: {
     // Your API key for Etherscan

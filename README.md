@@ -49,6 +49,6 @@ npx hardhat test
 The deployment output will give you the contract address after it is deployed. You can then use thes in conjunction with Hardhat tasks to perform operations on each contract.
 
 ```bash
-npx hardhat fund-link --contract INSERT_YOUR_CONTRACT_ADDRESS_HERE
-npx hardhat create-collectible --contract INSERT_YOUR_CONTRACT_ADDRESS_HERE
+npx hardhat fund-link --contract 0x52AF99ea48d9FB3bc8C0154e877563CfE8F6C8F2
+npx hardhat create-collectible --contract 0x52AF99ea48d9FB3bc8C0154e877563CfE8F6C8F2
 ```
